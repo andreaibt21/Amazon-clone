@@ -12,14 +12,14 @@ function Home() {
       />
       <div className="home__row">
         <Product
-          id={12312}
+          id={10001}
           title="Wage Universal Wired Gaming Headset - Black/Blue (WMANY-N116)"
           price={29.0}
           rating={3}
           image="https://m.media-amazon.com/images/I/71rm6rY2VAL._AC_UY218_.jpg"
         />
         <Product
-          id={12312}
+          id={10002}
           title="OFM Racing Style Bonded Leather Gaming Chair, in Green"
           price={119.0}
           rating={3}
@@ -28,21 +28,21 @@ function Home() {
       </div>
       <div className="home__row">
         <Product
-          id={12312}
+          id={10003}
           title="NECA - Coraline - Prop Replica 10' Coraline Doll"
           price={65.95}
           rating={5}
           image="https://m.media-amazon.com/images/I/716snjnssIL._AC_UL320_.jpg"
         />
         <Product
-          id={12312}
+          id={10004}
           title="LEGO Marvel The Eternals in Arishem’s Shadow 76155 Building Kit"
           price={59.9}
           rating={5}
           image="https://m.media-amazon.com/images/I/81OvopB4evL._AC_UL320_.jpg"
         />
         <Product
-          id={12312}
+          id={10005}
           title="Barbie Wonder Woman Paradise Island Giftset"
           price={75.0}
           rating={4}
@@ -51,7 +51,7 @@ function Home() {
       </div>
       <div className="home__row">
         <Product
-          id={12312}
+          id={10006}
           title="SAMSUNG 49-inch Odyssey G9 Gaming Monitor | QHD, 240hz, 1000R Curved, QLED, NVIDIA G-SYNC & FreeSync | LC49G95TSSNXZA Model"
           price={1764.04}
           rating={5}

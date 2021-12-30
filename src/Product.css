@@ -9,6 +9,7 @@
   min-width: 100px;
   background-color: white;
   z-index: 1;
+  flex: 1;
 }
 
 .product__info {
