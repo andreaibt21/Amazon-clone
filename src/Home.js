@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import Product from "./Product";
 
+
 function Home() {
   return (
     <div className="home">
@@ -58,6 +59,7 @@ function Home() {
           image="https://m.media-amazon.com/images/I/61SQz8S+fEL._AC_SL1000_.jpg"
         />
       </div>
+    
     </div>
   );
 }

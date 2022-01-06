@@ -4,11 +4,17 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from "./StateProvider";
+import { auth } from "./Firebase";
 
 function Header() {
   //first current state, second
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   console.log(basket);
+  const login = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
   return (
     <nav className="Header">
       <Link to="/">
@@ -24,24 +30,29 @@ function Header() {
       </div>
 
       <div className="header__nav">
-        <Link to="/login" className="header__link">
-          <div className="header__option">
-            <span className="header__optionLineOne">Hello Qazi</span>
-            <span className="header__optionLineTwo">Sign In</span>
+        <Link to={user ? "/" : "/login"} className="header__link">
+          <div onClick={login} className="header__option">
+            <span className="header__optionLineOne">Hello {user?.email}</span>
+            <span className="header__optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}
+            </span>
           </div>
         </Link>
-        <Link to="/" className="header__link">
+        <a
+          href="https://www.amazon.com/gp/css/order-history?ref_=nav_orders_first"
+          className="header__link"
+        >
           <div className="header__option">
             <span className="header__optionLineOne">Returns</span>
             <span className="header__optionLineTwo">& Orders</span>
           </div>
-        </Link>
-        <Link to="/" className="header__link">
+        </a>
+        <a href="https://www.primevideo.com/" className="header__link">
           <div className="header__option">
             <span className="header__optionLineOne">Your</span>
             <span className="header__optionLineTwo">Prime</span>
           </div>
-        </Link>
+        </a>
         <Link to="/checkout" className="header__link">
           <div className="header__optionBasket">
             <ShoppingBasketIcon />
